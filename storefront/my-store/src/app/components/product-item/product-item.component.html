@@ -1,0 +1,9 @@
+<div class="product-item">
+  <img [src]="product.picture" alt="{{product.name}}" width="150">
+  <h3>{{ product.name }}</h3>
+  <p>{{ product.description }}</p>
+  <p>Price: ${{ product.price }}</p>
+  <p *ngIf="product.stock_balance > 0">In stock: {{ product.stock_balance }}</p>
+  <p *ngIf="product.stock_balance === 0">Out of stock</p>
+  <button>Add to Cart</button>
+</div>

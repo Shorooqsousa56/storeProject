@@ -1,0 +1,14 @@
+<header class="main-header d-flex align-items-center justify-content-between px-4">
+  <!-- Store name  -->
+  <div class="store-name fw-bold fs-3">
+    Shorooq Store
+  </div>
+
+  <!-- Products + Cart -->
+  <div class="d-flex align-items-center justify-content-center gap-3 center-items">
+    <span class="products-link fw-semibold fs-5" [routerLink]="['/products']">Product List</span>
+    <span class="cart-icon" [routerLink]="['/cart']">
+      <i class="bi bi-cart-fill"></i>
+    </span>
+  </div>
+</header>

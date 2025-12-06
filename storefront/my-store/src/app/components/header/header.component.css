@@ -1,0 +1,41 @@
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #f8d6e5;
+  padding: 15px 30px;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.store-name {
+  color: #b03771;
+  font-size: 2rem; 
+  padding-left:10%;
+  transition: color 0.3s;
+  cursor: default;
+}
+
+.center-items {
+padding-right: 20%;
+ display: flex;
+  align-items: center;
+  gap: 40px; 
+}
+
+.products-link,
+.cart-icon i {
+  color: #b03771;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.store-name:hover,
+ .products-link:hover,
+ .cart-icon i:hover {
+  color: #ffffff;
+}

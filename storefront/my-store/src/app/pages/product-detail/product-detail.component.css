@@ -1,0 +1,21 @@
+.full-screen {
+  height: calc(100vh - 70px); 
+}
+.card {
+  border: none; 
+  box-shadow: none; 
+}
+img{
+    border: 1px solid #ddd;
+    
+}
+
+.btn-pink {
+  background-color: #e23c88;
+  color: white;
+  border: none;
+}
+.btn-pink:hover {
+  background-color: #b03771;
+  color: white;
+}

@@ -1,0 +1,27 @@
+<div *ngIf="!loading && product" class="d-flex justify-content-center align-items-center full-screen">
+  <div class="card p-4" style="max-width: 700px; border: none;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="product.picture" class="img-fluid rounded-start" [alt]="product.name">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title">{{ product.name }}</h3>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text"><strong>Price: ${{ product.price }}</strong></p>
+          <p class="card-text"><small class="text-muted">Stock: {{ product.stock_balance }}</small></p>
+
+          <!-- Quantity Selector -->
+          <div class="input-group mt-3" style="width: 130px;">
+            <button class="btn btn-outline-secondary" type="button" (click)="decreaseQuantity()">-</button>
+            <input type="number" class="form-control text-center" [value]="quantity" readonly>
+            <button class="btn btn-outline-secondary" type="button" (click)="increaseQuantity()">+</button>
+          </div>
+
+          <!-- Add to Cart -->
+          <button class="btn btn-pink mt-3" (click)="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
