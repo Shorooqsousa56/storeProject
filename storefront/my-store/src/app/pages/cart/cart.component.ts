@@ -66,7 +66,16 @@ export class CartComponent {
     
   
   }
+  onFullNameChange(value:string){
+    this.fullName=value;
+  }
 
+  onAddressChange(value:string){
+    this.address=value;
+  }
+  onCreditCardChange(value:string){
+    this.creditCard=value;
+  }
    
 
 

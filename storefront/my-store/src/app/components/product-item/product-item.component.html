@@ -1,9 +1,17 @@
-<div class="product-item">
-  <img [src]="product.picture" alt="{{product.name}}" width="150">
-  <h3>{{ product.name }}</h3>
-  <p>{{ product.description }}</p>
-  <p>Price: ${{ product.price }}</p>
-  <p *ngIf="product.stock_balance > 0">In stock: {{ product.stock_balance }}</p>
-  <p *ngIf="product.stock_balance === 0">Out of stock</p>
-  <button>Add to Cart</button>
+<div class="card h-100">
+  <img [src]="product.picture" class="card-img-top" [alt]="product.name" (click)="viewProduct()" style="cursor: pointer;">
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="fw-bold">Price: ${{ product.price }}</p>
+
+    <div class="mt-auto d-flex align-items-center justify-content-between">
+      <div class="input-group input-group-sm" style="width: 120px;">
+        <button class="btn btn-outline-secondary" type="button" (click)="decreaseQuantity()">-</button>
+        <input type="number" class="form-control text-center" [value]="quantity" [max]="product.stock_balance" readonly>
+        <button class="btn btn-outline-secondary" type="button" (click)="increaseQuantity()">+</button>
+      </div>
+    </div>
+
+    <button class="btn btn-pink mt-2" (click)="addToCart()">Add to Cart</button>
+  </div>
 </div>

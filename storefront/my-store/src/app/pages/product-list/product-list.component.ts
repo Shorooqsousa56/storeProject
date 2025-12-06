@@ -67,4 +67,14 @@ this.router.navigate(['/product',product.id]);
 
  }
 
+ handleAddToCart(event:{ product: Product, quantity: number }){
+this.cartService.addToCart(event.product, event.quantity);
+    console.log(`Added to cart: ${event.product.name}, Qty: ${event.quantity}`);
+ }
+
+  handleViewProduct(product: Product) {
+    
+    this.router.navigate(['/product',product.id]);
+  }
+
 }

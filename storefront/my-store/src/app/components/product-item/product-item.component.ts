@@ -10,9 +10,28 @@ import { Product } from '../../models/product';
 })
 export class ProductItemComponent {
   @Input() product!: Product;
-    @Output() productSelected = new EventEmitter<Product>(); 
+    @Output() addToCartEvent  = new EventEmitter<{product: Product, quantity: number}>(); 
+    @Output() viewProductEvent = new EventEmitter<Product>();
+    quantity:number=1;
+
+    increaseQuantity(){
+    if(this.quantity < this.product.stock_balance) this.quantity++;
+
+    }
+
+    
+    decreaseQuantity(){
+    if(this.quantity >1 ) this.quantity--;
+
+    }
+
+    addToCart(){
+          this.addToCartEvent.emit({ product: this.product, quantity: this.quantity });
+
+    }
+
   viewProduct(){
-    this.productSelected.emit(this.product);
+    this.viewProductEvent.emit(this.product);
   }
 
 }

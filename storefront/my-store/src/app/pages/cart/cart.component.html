@@ -56,6 +56,7 @@
       id="fullName" 
       placeholder="Full Name"
       [(ngModel)]="fullName"
+       (ngModelChange)="onFullNameChange($event)"
       name="fullName"
     >
     <label for="fullName">Full Name</label>
@@ -69,6 +70,7 @@
       id="address" 
       placeholder="Address"
       [(ngModel)]="address"
+      (ngModelChange)="onAddressChange($event)"
       name="address"
     >
     <label for="address">Address</label>
@@ -82,6 +84,7 @@
       id="creditCard" 
       placeholder="Credit Card"
       [(ngModel)]="creditCard"
+      (ngModelChange)="onCreditCardChange($event)"
       name="creditCard"
     >
     <label for="creditCard">Credit Card</label>

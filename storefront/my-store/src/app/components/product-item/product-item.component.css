@@ -1,0 +1,51 @@
+.card-img-top {
+  object-fit: contain;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input {
+  pointer-events: none;
+}
+.btn-pink {
+  background-color: #e23c88; 
+  color: #fff;
+  border: none;
+}
+
+.btn-pink:hover {
+  background-color: #b03771; 
+  color: #fff;
+}
+.card {
+  transition: all 0.3s ease; 
+  border: 1px solid transparent; 
+  border-radius: 8px; 
+  overflow: hidden;
+  border: 1px solid #aba9aa; 
+
+}
+
+.card:hover {
+  border: 1px solid #e23c88; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+img{
+  
+ width: 50%;
+   margin: 0 auto; 
+  border-radius: 5px;
+  margin-top: 10px;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+img:hover{
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
